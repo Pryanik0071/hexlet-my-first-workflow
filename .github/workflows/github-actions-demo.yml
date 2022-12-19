@@ -4,5 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - make: make say-hello
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - name: echo using makefile
+        run: make say
+      - name: echo without makefile
+        run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
